@@ -1,0 +1,564 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.page-content {
+  padding-top: 100px; /* Высота хедера (72px) + небольшой запас */
+}
+
+body {
+  font-family: 'Inter', 'Roboto', sans-serif;
+  background: #0e0e0e;
+  color: #e6e6e6;
+  line-height: 1.7;
+}
+
+/* CONTAINER */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* HEADER */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(10,10,10,.85);
+  backdrop-filter: blur(8px);
+  z-index: 1000;
+}
+
+.nav.container {
+  height: 72px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+/* Навигация */
+nav a {
+  margin-left: 22px;
+  text-decoration: none;
+  font-size: 14px;
+  color: #ccc;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+nav a:hover,
+nav a.active {
+  color: #c9a14a;
+  font-weight: 600;
+}
+
+/* Универсальные ссылки */
+a {
+  color: #c9a14a;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+a:hover {
+  color: #fff;
+  transform: scale(1.03);
+}
+
+/* HERO / PAGE HERO */
+.hero-sand,
+.page-hero {
+  position: relative;
+  height: 100vh;
+  padding-top: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  color: #f5f5f5;
+}
+
+.hero-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.hero-sand::after,
+.page-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,.65);
+  z-index: 2;
+}
+
+.hero-content,
+.page-hero .container {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+}
+
+.hero-content h1,
+.page-hero h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+  font-weight: 700;
+  line-height: 1.2;
+  text-shadow: 0 4px 20px rgba(0,0,0,0.6);
+}
+
+.hero-content p,
+.page-hero p {
+  max-width: 650px;
+  margin: 0 auto 30px;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #ddd;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.5);
+}
+
+/* BUTTONS — универсальные */
+.btn,
+.page-hero .btn,
+.contact-form .btn {
+  display: inline-block;
+  padding: 14px 32px;
+  border-radius: 10px;
+  border: 1px solid #c9a14a;
+  background: transparent;
+  color: #c9a14a;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn:hover,
+.page-hero .btn:hover,
+.contact-form .btn:hover {
+  background: #c9a14a;
+  color: #111;
+  transform: scale(1.05);
+  box-shadow: 0 6px 18px rgba(201,161,74,0.5);
+}
+
+/* ADVANTAGES */
+.advantages_container {
+  background: #222;
+  padding: 80px 0;
+}
+
+.advantages_container h2 {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 50px;
+}
+
+.adv-table {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.advantage h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.advantage p {
+  color: #ccc;
+  font-size: 15px;
+}
+
+/* PRODUCTS */
+.assortment {
+  padding: 100px 0;
+}
+
+.assortment h2 {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 50px;
+}
+
+.assort-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.product-card {
+  background: #fff;
+  color: #111;
+  border-radius: 20px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-card img {
+  height: 180px;
+  object-fit: contain;
+  margin-bottom: 20px;
+}
+
+.product-card ul {
+  list-style: none;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.price {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.product-actions {
+  margin-top: auto;
+  display: flex;
+  gap: 10px;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.6);
+  overflow: auto;
+}
+
+.modal-content {
+  background-color: #fff;
+  color: #000;
+  margin: 50px auto;
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 650px;
+  width: 90%;
+  text-align: left;
+  position: relative;
+  transform: translateY(-200px);
+  opacity: 0;
+  transition: all 0.4s ease-out;
+  font-family: 'Roboto', sans-serif;
+}
+
+.modal.show .modal-content {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.close-modal {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #000;
+}
+
+.modal-content img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.modal-content h2,
+.modal-content p,
+.modal-content ul,
+.modal-content .modal-price {
+  color: #000;
+  margin-bottom: 15px;
+}
+
+.modal-content ul {
+  padding-left: 20px;
+}
+
+.modal-content ul li {
+  margin-bottom: 8px;
+}
+
+/* ABOUT */
+.about-sand {
+  background: #222;
+  padding: 80px 0;
+}
+
+.about-sand-inner {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.about-sand h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+/* SECTIONS — Центрированный контент */
+.section {
+  padding: 80px 0;
+  background: #111;
+  color: #e6e6e6;
+  text-align: center;
+}
+
+.section.light {
+  background: #1a1a1a;
+}
+
+.section h2 {
+  font-size: 36px;
+  margin-bottom: 18px;
+  color: #fff;
+  position: relative;
+  display: inline-block;
+}
+
+.section h2::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: #c9a14a;
+  margin: 8px auto 0;
+  border-radius: 2px;
+}
+
+.section p {
+  max-width: 700px;
+  margin: 12px auto;
+  font-size: 17px;
+  line-height: 1.7;
+  color: #ccc;
+}
+
+/* CONTACT FORM */
+.contact-form {
+  max-width: 500px;
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 15px 15px;
+  border-radius: 8px;
+  border: 1px solid #555;
+  background: #1a1a1a;
+  color: #eee;
+  font-size: 16px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #999;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #c9a14a;
+  box-shadow: 0 0 8px rgba(201,161,74,0.4);
+}
+
+.contact-form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* FOOTER */
+footer {
+  background: #111;
+  color: #aaa;
+  text-align: center;
+  padding: 40px 0 20px;
+  font-size: 14px;
+  border-top: 1px solid #222;
+}
+
+.footer-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.footer-btn {
+  display: inline-block;
+  padding: 10px 18px;
+  border-radius: 8px;
+  border: 1px solid #777;
+  color: #eee;
+  background: transparent;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.footer-btn:hover {
+  background: #c9a14a;
+  color: #111;
+  box-shadow: 0 6px 15px rgba(201,161,74,0.5);
+  transform: scale(1.05);
+}
+
+/* Footer bottom text */
+.footer-bottom {
+  font-size: 13px;
+  color: #777;
+}
+
+@media (max-width: 1024px) {
+  .adv-table { 
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 30px; 
+    padding: 0 20px;
+  }
+  .assort-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* Момент, когда меню начинает мешать логотипу (примерно 850px) */
+@media (max-width: 850px) {
+  nav a {
+    margin-left: 10px;
+    font-size: 12px;
+  }
+  .logo {
+    font-size: 22px;
+  }
+}
+
+/* Твой основной запрос для мобильных и узких экранов */
+@media (max-width: 768px) {
+  .nav.container {
+    height: auto;
+    padding: 20px 0;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  nav a {
+    margin: 0; /* Убираем margin-left, так как теперь есть gap */
+    padding: 6px 12px;
+    border: 1px solid rgba(201,161,74,0.3);
+    border-radius: 6px;
+    background: rgba(255,255,255,0.05);
+  }
+
+  /* Секция преимуществ — переходим в 1 колонку чуть раньше */
+  .advantages_container {
+    padding: 60px 0;
+  }
+
+  .adv-table {
+    grid-template-columns: 1fr; /* Одна колонка для удобства чтения */
+    gap: 25px;
+    max-width: 500px; /* Чтобы текст не растягивался слишком широко */
+    margin: 0 auto;
+  }
+
+  .advantage {
+    text-align: left; /* Оставляем левое выравнивание, так удобнее читать */
+    padding: 20px;
+    background: rgba(255,255,255,0.03);
+    border-radius: 12px;
+  }
+
+  /* Сетка товаров */
+  .assort-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    padding: 0 10px;
+  }
+
+  .hero-sand, .page-hero {
+    height: auto;
+    min-height: 70vh;
+    padding: 120px 0 60px;
+  }
+}
+
+/* Совсем узкие экраны */
+@media (max-width: 480px) {
+  .container {
+    width: 92%; /* Чуть больше места по бокам */
+  }
+
+  .hero-content h1 {
+    font-size: 26px;
+  }
+
+  .section h2 {
+    font-size: 24px;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* Центрирование контактной формы на странице Contacts */
+body.contacts .section .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;       /* по горизонтали */
+  justify-content: center;   /* по вертикали */
+  min-height: 70vh;          /* чтобы форма была в центре экрана */
+  gap: 20px;
+}
+
+body.contacts .contact-form {
+  width: 100%;
+  max-width: 500px;
+}
+
+/* Мобильная адаптация для формы */
+@media (max-width: 768px) {
+  body.contacts .section .container {
+    min-height: auto;
+    padding: 40px 20px;
+  }
+
+  body.contacts .contact-form {
+    width: 95%;
+  }
+}
