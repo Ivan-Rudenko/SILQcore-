@@ -13,8 +13,8 @@ const products = {
     text: `
       This premium quartz sand fraction 0.1–0.4 mm is perfect for glass production.
       <ul>
-        <li>Purity: ≥ 99%</li>
-        <li>Moisture: ≤ 0.2%</li>
+        <li>Purity: ≥ 99.87%</li>
+        <li>Moisture: ≤ 0.023%</li>
         <li>Application: Glass industry, high-quality casting</li>
         <li>Features: Fine uniform grains, optimal for high transparency glass</li>
       </ul>
@@ -27,8 +27,8 @@ const products = {
     text: `
       Quartz sand fraction 0.4–0.8 mm is widely used in construction.
       <ul>
-        <li>Purity: ≥ 98%</li>
-        <li>Moisture: ≤ 0.3%</li>
+        <li>Purity: ≥ 99.87%</li>
+        <li>Moisture: ≤ 0.023%</li>
         <li>Application: Concrete, mortar, building materials</li>
         <li>Features: Medium grain size, ideal for mixing and compaction</li>
       </ul>
@@ -41,8 +41,8 @@ const products = {
     text: `
       Fraction 0.8–1.2 mm is suitable for heavy construction and industrial use.
       <ul>
-        <li>Purity: ≥ 97%</li>
-        <li>Moisture: ≤ 0.3%</li>
+        <li>Purity: ≥ 99.87%</li>
+        <li>Moisture: ≤ 0.023%</li>
         <li>Application: Road construction, concrete blocks, industrial projects</li>
         <li>Features: Coarse grains, excellent compaction properties</li>
       </ul>
@@ -55,8 +55,8 @@ const products = {
     text: `
       Large fraction 1.2–1.6 mm for industrial and specialty applications.
       <ul>
-        <li>Purity: ≥ 96%</li>
-        <li>Moisture: ≤ 0.3%</li>
+        <li>Purity: ≥ 99.87%</li>
+        <li>Moisture: ≤ 0.023%</li>
         <li>Application: Foundry, filtration, decorative landscaping</li>
         <li>Features: Coarse and uniform grains, high resistance to abrasion</li>
       </ul>
