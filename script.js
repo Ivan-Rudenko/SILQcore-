@@ -9,8 +9,7 @@ const closeModal = document.querySelector('.close-modal');
 const products = {
   sand1: {
     title: "Quartz Sand 0.1–0.4 mm",
-    img: "0.1-0.4.jpg",
-    price: "2 200 UAH / t",
+    // img: "0.1-0.4.jpg",
     text: `
       This premium quartz sand fraction 0.1–0.4 mm is perfect for glass production.
       <ul>
@@ -24,8 +23,7 @@ const products = {
   },
   sand2: {
     title: "Quartz Sand 0.4–0.8 mm",
-    img: "0.4-0.8.jpg",
-    price: "1 900 UAH / t",
+    // img: "0.4-0.8.jpg",
     text: `
       Quartz sand fraction 0.4–0.8 mm is widely used in construction.
       <ul>
@@ -39,8 +37,7 @@ const products = {
   },
   sand3: {
     title: "Quartz Sand 0.8–1.2 mm",
-    img: "0.8-1.2.jpg",
-    price: "1 700 UAH / t",
+    // img: "0.8-1.2.jpg",
     text: `
       Fraction 0.8–1.2 mm is suitable for heavy construction and industrial use.
       <ul>
@@ -54,8 +51,7 @@ const products = {
   },
   sand4: {
     title: "Quartz Sand 1.2–1.6 mm",
-    img: "1.2-1.6.jpg",
-    price: "1 500 UAH / t",
+    // img: "1.2-1.6.jpg",
     text: `
       Large fraction 1.2–1.6 mm for industrial and specialty applications.
       <ul>
@@ -75,9 +71,9 @@ detailsButtons.forEach(btn => {
     const product = products[productKey];
 
     modalTitle.innerHTML = product.title;
-    modalImg.src = product.img;
+    // modalImg.src = product.img;
     modalText.innerHTML = product.text;
-    modalPrice.innerHTML = product.price;
+   
 
     modal.classList.add('show');
     modal.style.display = 'block';
