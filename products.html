@@ -79,6 +79,67 @@
   </div> <!-- конец container -->
 </section>
 
+<section class="sand-gallery" style="text-align: center;">
+  <div class="container">
+    <h2>Sand Gallery</h2>
+    <p>Explore our quartz sand samples.</p>
+
+    <div class="gallery-grid">
+      <div class="gallery-item">
+        <img src="images/sand(1).jpeg" alt="Quartz Sand Sample 1">
+      </div>
+      <div class="gallery-item">
+        <img src="images/sand(2).jpeg" alt="Quartz Sand Sample 2">
+      </div>
+       <div class="gallery-item">
+        <img src="images/sand(3).jpeg" alt="Quartz Sand Sample 3">
+      </div>
+      <div class="gallery-item">
+        <img src="images/sand(5).jpeg" alt="Quartz Sand Sample 4">
+      </div>
+      <div class="gallery-item">
+        <img src="images/sand(6).jpeg" alt="Quartz Sand Sample 5">
+      </div>
+      <div class="gallery-item">
+        <img src="images/sand(4).jpeg" alt="Quartz Sand Sample 6">
+      </div>
+      <div class="gallery-item">
+        <img src="images/sand(7).jpeg" alt="Quartz Sand Sample 7">
+      </div>
+      <div class="gallery-item">
+        <img src="images/sand(8).jpeg" alt="Quartz Sand Sample 8">
+      </div>
+      <div class="gallery-item">
+        <img src="images/sand(9).jpeg" alt="Quartz Sand Sample 9">
+      </div>
+      <div class="gallery-item">
+        <img src="images/sand(10).jpeg" alt="Quartz Sand Sample 10">
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.gallery-item img {
+  width: 100%;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.gallery-item img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+}
+</style>
+
 <!-- Новая секция с сертификатами -->
 <section class="certificates-note">
   <div class="container" style="margin: 20px auto">
